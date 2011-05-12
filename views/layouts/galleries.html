@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	{pyro:theme:partial name="metadata"}
+</head>
+<body id="top">
+	{pyro:theme:partial name="header"}
+	<div id="container">
+		{pyro:integration:analytics}
+		{pyro:theme:partial name="breadcrumbs"}
+		<div id="page">
+			<section id="content" class="full">
+				{pyro:session:messages success="success-box" notice="notice-box" error="error-box"}
+				{pyro:template:body}
+			</section>
+			<div class="clear"></div>
+		</div>
+		{pyro:theme:partial name="footer"}
+	</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	{pyro:theme:partial name="metadata"}
+</head>
+<body id="top">
+	{pyro:theme:partial name="header"}
+	<div id="container">
+		{pyro:integration:analytics}
+		{pyro:theme:partial name="breadcrumbs"}
+		<div id="page">
+			<section id="content">
+				{pyro:session:messages success="success-box" notice="notice-box" error="error-box"}				
+				{pyro:template:body}
+			</section>
+			<aside>
+				{pyro:widgets:area slug="sidebar"}
+				{if '{pyro:session:data name="user_id"}'}
+					<div class="user_logged_in">
+						<h4>{pyro:helper:lang line="settings_label"}</h4>
+						<ul class="arrow">
+							<li><a href="{pyro:url:site}/users/logout">{pyro:helper:lang line="logout_label"}</a></li>
+							{if '{pyro:settings:enable_profiles}'}
+								<li><a href="{pyro:url:site}/edit-profile" target="_blank">{pyro:helper:lang line="edit_profile_label"}</a></li>
+							{/if}
+							<li><a href="{pyro:url:site}/edit-settings" target="_blank">{pyro:helper:lang line="settings_label"}</a></li>
+							{if '{pyro:user:group}' == 'admin'}
+								<li><a href="{pyro:url:site}/admin" target="_blank">{pyro:helper:lang line="cp_title"}</a></li>
+							{/if}
+						</ul>
+					</div>
+				{else}
+					<div class="user_login">
+						<h4>{pyro:helper:lang line="login_title"}</h4>
+						<form method="{pyro:url:site}/users/login" class="login">
+							<fieldset>
+								<div>
+									<label for="aside_email">{pyro:helper:lang line="user_email"}:</label>
+									<input type="email" id="aside_email" name="email" maxlength="120" placeholder="{pyro:helper:lang line='user_email'}" min="6" />
+								</div>
+								<div>
+									<label for="aside_password">{pyro:helper:lang line="user_password"}:</label>
+									<input type="password" id="aside_password" name="password" maxlength="20" placeholder="{pyro:helper:lang line='user_password'}" />
+								<div>
+								<div>
+									<input type="submit" value="{pyro:helper:lang line='user_login_btn'}" name="btnLogin" />
+									<em>or</em> 
+									<a href="{pyro:url:site}register">{pyro:helper:lang line="user_register_btn"}</a>
+								</div>
+								<div>
+									<label for="remember">
+										<input type="checkbox" name="remember" id="remember" value="1" />
+										{pyro:helper:lang line="user_remember"}
+									</label>
+
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				{/if}
+			</aside>
+			<div class="clear"></div>
+		</div>
+		{pyro:theme:partial name="footer"}
+	</div>
+	
+</body>
+</html>
