@@ -2,6 +2,10 @@
 
 Prepare for the impending apocalypse with PyroCMS and the Twenty Twelve theme.
 
+## Compatibility
+
+Looks best in Chrome 11. Looks OK in Firefox 4 and IE 9.
+
 ## License
 
 Apache 2
