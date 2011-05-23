@@ -138,6 +138,11 @@ nav > ul li a:focus {
 	color: #efefef;
 }
 
+nav li.current a:link,
+nav li.current a:visited {
+	color: #efefef;
+}
+
 /* Nav (dropdowns) */
 
 /* */
