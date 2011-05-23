@@ -20,6 +20,40 @@ hr {
 	color: #cfcfcf;
 }
 
+/* Pre */
+
+pre {
+	font: 14px "Monaco", "Consolas", "Andale Mono", "DejaVu Sans Mono", monospace;
+	color: #555;
+	padding: 5px;
+	background-color: #f7f7f7;
+}
+
+/* Code */
+
+code {
+	font-family: "Monaco", "Consolas", "Andale Mono", "DejaVu Sans Mono", monospace;
+	color: #555;
+	background-color: #f7f7f7;
+}
+
+/* Abbr, acronym */
+
+abbr, acronym {
+	border-bottom: 1px dotted #555;
+}
+
+/* Ins & Del */
+
+del {
+	text-decoration: line-through;
+}
+
+ins {
+	background-color: #fffccc;
+	text-shadow: 0px 1px 0px #fff;
+}
+
 /* Blockquote */
 
 blockquote {
@@ -634,7 +668,7 @@ table thead th {
 }
 
 table {
-	border-color: red;
+	border: 0px transparent none;
 }
 
 table tbody td {
