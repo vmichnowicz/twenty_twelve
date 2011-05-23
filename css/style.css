@@ -206,9 +206,11 @@ nav ul ul ul {
 }
 
 nav ul ul li {
+	position: relative;
 	margin: 0px;
 	display: list-item;
 	background: none transparent;
+	list-style-image: none;
 }
 
 nav ul ul a:link {
